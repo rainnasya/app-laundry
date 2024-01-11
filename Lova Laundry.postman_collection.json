@@ -1,0 +1,400 @@
+{
+	"info": {
+		"_postman_id": "0b434832-cf0d-46d2-9bf5-34c311719ed4",
+		"name": "Lova Laundry",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10963025"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{laundryUrl}}/login",
+					"host": [
+						"{{laundryUrl}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Beni\",\r\n    \"email\":\"beni@mail.com\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{laundryUrl}}/register",
+					"host": [
+						"{{laundryUrl}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesanan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|laravel_sanctum_HZ5Ukb4OcmKPYNWReJ1sVklypFNjP9sbxqEAcQjDe72802a6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{laundryUrl}}/pesanan",
+					"host": [
+						"{{laundryUrl}}"
+					],
+					"path": [
+						"pesanan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Layanan",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|laravel_sanctum_HZ5Ukb4OcmKPYNWReJ1sVklypFNjP9sbxqEAcQjDe72802a6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{laundryUrl}}/jenislayanan",
+					"host": [
+						"{{laundryUrl}}"
+					],
+					"path": [
+						"jenislayanan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Input Layanan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|laravel_sanctum_HZ5Ukb4OcmKPYNWReJ1sVklypFNjP9sbxqEAcQjDe72802a6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jns_layanan\":\"Laundry Express\",\r\n    \"harga_layanan\":8000,\r\n    \"deskripsi\":\"Laundry Express\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{laundryUrl}}/jenislayanan",
+					"host": [
+						"{{laundryUrl}}"
+					],
+					"path": [
+						"jenislayanan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Layanan Khusus",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|laravel_sanctum_HZ5Ukb4OcmKPYNWReJ1sVklypFNjP9sbxqEAcQjDe72802a6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{laundryUrl}}/layanankhusus",
+					"host": [
+						"{{laundryUrl}}"
+					],
+					"path": [
+						"layanankhusus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Layanan Khusus",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|laravel_sanctum_HZ5Ukb4OcmKPYNWReJ1sVklypFNjP9sbxqEAcQjDe72802a6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"lyn_khusus\" :\"Cuci boneka\",\r\n            \"harga_khusus\" : 9000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{laundryUrl}}/layanankhusus",
+					"host": [
+						"{{laundryUrl}}"
+					],
+					"path": [
+						"layanankhusus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pelanggan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{laundryToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{laundryUrl}}/pelanggan",
+					"host": [
+						"{{laundryUrl}}"
+					],
+					"path": [
+						"pelanggan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Pelanggan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|laravel_sanctum_HZ5Ukb4OcmKPYNWReJ1sVklypFNjP9sbxqEAcQjDe72802a6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nama_pelanggan",
+							"value": "Beni Fajriii",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "Surau Gadang",
+							"type": "text"
+						},
+						{
+							"key": "telp",
+							"value": "0823323",
+							"type": "text"
+						},
+						{
+							"key": "foto_profil",
+							"type": "file",
+							"src": "/C:/Users/mbfaj/Pictures/FWdpoNYaAAAnb57.jfif"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{laundryUrl}}/create-pelanggan",
+					"host": [
+						"{{laundryUrl}}"
+					],
+					"path": [
+						"create-pelanggan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get status pesanan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|laravel_sanctum_HZ5Ukb4OcmKPYNWReJ1sVklypFNjP9sbxqEAcQjDe72802a6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{laundryUrl}}/statuspesanan",
+					"host": [
+						"{{laundryUrl}}"
+					],
+					"path": [
+						"statuspesanan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Status Layanan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|laravel_sanctum_HZ5Ukb4OcmKPYNWReJ1sVklypFNjP9sbxqEAcQjDe72802a6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"nama_status\" : \"Diproses\",\r\n            \"urutan\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{laundryUrl}}/statuspesanan",
+					"host": [
+						"{{laundryUrl}}"
+					],
+					"path": [
+						"statuspesanan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InsertPesanan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|laravel_sanctum_HZ5Ukb4OcmKPYNWReJ1sVklypFNjP9sbxqEAcQjDe72802a6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"kd_pesanan\": \"PK1111\",\r\n    \"tgl_pesanan\": \"2023-09-04\",\r\n    \"pelanggan_id\": \"1\",\r\n    \"jenislayanan_id\": \"1\",\r\n    \"berat\": \"5\",\r\n    \"layanankhusus_id\": \"1\",\r\n    \"jml_layanankhusus\": \"1\",\r\n    \"statuspesanan_id\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{laundryUrl}}/pesanan",
+					"host": [
+						"{{laundryUrl}}"
+					],
+					"path": [
+						"pesanan"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
